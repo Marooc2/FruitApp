@@ -88,7 +88,7 @@ def multiClassifier(request):
         if secretKey != "secretKey":
             return Response("Error de autenticación")
         
-        s3 = boto3.resource('s3', region_name='us-west-1',aws_access_key_id='AKIA35RUPLHOZXWR4NXW',aws_secret_access_key= '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')
+        s3 = boto3.resource('s3', region_name='us-west-1',aws_access_key_id='aws_access_key_id',aws_secret_access_key= 'aws_secret_access_key')
 
         bucket = s3.Bucket('myfruitappbucket')
         s3_file = bucket.Object('fruit-detection/' + imgName)
